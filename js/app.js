@@ -34,6 +34,28 @@ chartConfig.colors = [
       .css('height', wH - hH - 100)
       .css('width', $lC.width() - 10);
   };
+  
+  // Override set chart area function
+  ChartBuilder.setChartArea = function() {
+		var hasBargrid = false;
+		for (var i = chart.g.series.length - 1; i >= 0; i--){
+			if(chart.g.series[i].type == "bargrid") {
+				hasBargrid = true;
+				break;
+			}
+		};
+		
+		if(hasBargrid) {
+			$("#chartContainer").css("height",
+				chart.g.series[0].data.length*22 + 
+				chart.g.padding.top + 
+				chart.g.padding.bottom
+				)
+		}
+		else {
+			updateChartDims();
+		}
+	},
 
   updateChartDims();
   $(document).ready(function() {
