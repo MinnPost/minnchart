@@ -18,3 +18,70 @@
 a {
   color: #801019;
 }
+
+h2 {
+  margin-bottom: .5em;
+}
+
+.inner-column {
+  padding: 0 1em;
+}
+
+#interactiveContent {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#interactiveContent #leftColumn {
+  width: 70%;
+}
+
+#interactiveContent #leftColumn .inner-column {
+  border-right: 1px dashed #BCBCBC;
+  height: 1000px;
+}
+
+#interactiveContent #rightColumn {
+  width: 30%;
+}
+
+#interactiveContent .interfaceCol {
+  margin: 0 0 2em 0;
+  width: 90%;
+}
+
+#staticStuff {
+  top: 1;
+  left: 0;
+}
+
+#dataTable {
+	width: 100%;
+  margin-bottom: 1em;
+  border: 1px solid #BCBCBC;
+}
+
+#dataTable table {
+  width: 100%;
+}
+
+#datainput {
+  margin: 0;
+}
+
+textarea,
+input {
+  border: 1px solid #BCBCBC;
+}
+
+#interactiveContent #rightColumn textarea,
+#interactiveContent #rightColumn input,
+#interactiveContent #rightColumn select {
+  margin-bottom: .5em;
+}
+
+#interactiveContent #rightColumn cite {
+  margin-top: -.5em;
+  margin-bottom: .5em;
+}

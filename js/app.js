@@ -19,4 +19,24 @@ chartConfig.colors = [
   '#995f99','#804c80','#665266','#158eff','#99cdff',
   '#9cc2e6','#87abcc','#7394b3','#5f7d99','#466780',
   '#525c66'
-]
+];
+
+// Some hacks
+(function($, undefined) {
+  
+  // Update chart container
+  function updateChartDims() {
+    var wH = $(window).height();
+    var hH = $('.minnchart-header').height();
+    var $lC = $('#interactiveContent #leftColumn .inner-column');
+    
+    $('#chartContainer')
+      .css('height', wH - hH - 100)
+      .css('width', $lC.width() - 10);
+  };
+
+  updateChartDims();
+  $(document).ready(function() {
+    updateChartDims();
+  });
+})(jQuery);
