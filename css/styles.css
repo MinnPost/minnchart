@@ -1,0 +1,20 @@
+/**
+ * Custom styles for MinnChart
+ */
+.minnchart-header {
+  margin: 0 1em 1em 1em;
+  border-bottom: 1px solid #BCBCBC;
+}
+
+.minnchart-header h1 {
+  margin-bottom: 0;
+}
+
+.minnchart-header p {
+  font-size: .85em;
+  color: #BCBCBC;
+}
+
+a {
+  color: #801019;
+}

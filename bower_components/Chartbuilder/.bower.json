@@ -1,0 +1,12 @@
+{
+  "name": "Chartbuilder",
+  "homepage": "https://github.com/Quartz/Chartbuilder",
+  "_release": "8309abea74",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8309abea740922ad641439ee5147ac1fbdd91193"
+  },
+  "_source": "https://github.com/Quartz/Chartbuilder.git",
+  "_target": "*"
+}
