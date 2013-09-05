@@ -46,5 +46,7 @@ svg text.metaText {
 }
 
 #titleLine {
-  fill: #666666;
+  fill: #222222;
+  font-size: 18px;
+  font-weight: bold;
 }

@@ -62,6 +62,7 @@
   // object.  See the Gneiss charting options.
   ChartBuilder.start({
     colors: palette,
+    title: 'Apples v. Oranges',
     creditline: ''
   });
 })(jQuery);
