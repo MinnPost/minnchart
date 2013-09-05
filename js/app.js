@@ -14,6 +14,14 @@
     return p.replace('#', '');
   });
 
+  // Chart config
+  var config = {
+    colors: palette,
+    title: 'Apples v. Oranges',
+    sourceline: 'Data compiled manually by MinnPost',
+    creditline: 'MinnPost'
+  };
+
   // Override the inline styling function to reverse order so that
   // the cascading affect of CSS is handled the usual way and styles are
   // applied in a non-destructive way.
@@ -58,11 +66,12 @@
   // Override all colors for colorpicker
   ChartBuilder.allColors = paletteHash;
 
+  // Some hacking around interface not updating properly
+  $('#chart_title').val(config.title);
+  $('#creditLine').val(config.creditline);
+  $('#sourceLine').val(config.sourceline);
+
   // This starts Chartbuilder and can be passed a configuration
   // object.  See the Gneiss charting options.
-  ChartBuilder.start({
-    colors: palette,
-    title: 'Apples v. Oranges',
-    creditline: ''
-  });
+  ChartBuilder.start(config);
 })(jQuery);
