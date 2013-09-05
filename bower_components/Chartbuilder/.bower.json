@@ -1,12 +1,31 @@
 {
   "name": "Chartbuilder",
+  "main": "js/chartbuilder.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "canvg": "https://canvg.googlecode.com/files/canvg-1.3.zip",
+    "d3": "~2.10.3",
+    "jquery": "~1.8.1",
+    "modernizr": "~2.6.1",
+    "rgbcolor": "http://www.phpied.com/files/rgbcolor/rgbcolor.js",
+    "really-simple-color-picker": "https://github.com/laktek/really-simple-color-picker.git",
+    "jquery-csv": "https://jquery-csv.googlecode.com/files/jquery.csv-0.71.min.js",
+    "html5-boilerplate": "~4.2.0"
+  },
   "homepage": "https://github.com/Quartz/Chartbuilder",
-  "_release": "8309abea74",
+  "_release": "master",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "8309abea740922ad641439ee5147ac1fbdd91193"
+    "commit": "e862cb8e5f756d97372984ec2bc8ac5cec60ab87"
   },
   "_source": "https://github.com/Quartz/Chartbuilder.git",
-  "_target": "*"
+  "_target": "*",
+  "_originalSource": "https://github.com/Quartz/Chartbuilder.git"
 }
