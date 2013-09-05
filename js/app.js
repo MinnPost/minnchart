@@ -4,6 +4,35 @@
 
 (function($, undefined) {
 
+  // Override the inline styling function to reverse order so that
+  // the cascading affect of CSS is handled the usual way
+  ChartBuilder.inlineAllStyles = function() {
+    var chartStyle, selector, cssText;
+
+    for (var i = 0; i <= document.styleSheets.length - 1; i++){
+      if(document.styleSheets[i].href && document.styleSheets[i].href.indexOf("gneisschart.css") != -1) {
+        console.log(document.styleSheets[i]);
+        if (document.styleSheets[i].rules != undefined) {
+          chartStyle = document.styleSheets[i].rules 
+        }
+        else {
+          chartStyle = document.styleSheets[i].cssRules
+        }
+      }
+    }
+    if(chartStyle != null && chartStyle != undefined)
+    {
+      for (var i=0; i < chartStyle.length; i++) {
+        if(chartStyle[i].type == 1) {
+          //cssRule is a style rule
+          selector = chartStyle[i].selectorText;
+          cssText = chartStyle[i].style.cssText;
+          d3.selectAll(selector).attr("style",cssText)
+        }
+      };
+    }
+  };
+
   // This starts Chartbuilder and can be passed a configuration
   // object.  See the Gneiss charting options.
   ChartBuilder.start({
@@ -23,15 +52,4 @@
     ],
     creditline: ''
   });
-
-  // Update chart container
-  function updateChartDims() {
-    var wH = $(window).height();
-    var hH = $('.minnchart-header').height();
-    var $lC = $('#interactiveContent #leftColumn .inner-column');
-
-    $('#chartContainer')
-      .css('height', wH - hH - 100)
-      .css('width', $lC.width() - 10);
-  };
 })(jQuery);
