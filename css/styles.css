@@ -10,3 +10,18 @@ a {
 small {
   color: #9B9B9B;
 }
+
+
+svg .axis text,
+svg text.barLabel,
+svg text.bargridLabel,
+svg text.metaText,
+svg .legendItem text,
+#titleLine  {
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,"Century Gothic","CenturyGothic","Arial Narrow",Arial,"Lucida Grande",sans-serif;
+}
+
+
+svg .yAxis text {
+  z-index: 10;
+}
